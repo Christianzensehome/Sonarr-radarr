@@ -1,0 +1,22 @@
+version: '2'
+services:
+  radarr:
+    build: ./docker-radarr-master
+    privileged: true
+    restart: always
+    expose:
+      - "7878"    
+    ports:
+      - "7878:7878"
+      
+  sonarr:
+    build: ./docker-sonarr-master
+    privileged: true
+    restart: always
+    expose:
+      - "78989"    
+    ports:
+      - "8989:8989"
+  
+
+  
